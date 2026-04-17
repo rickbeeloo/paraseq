@@ -12,6 +12,9 @@ use crate::{
     ProcessError, Record,
 };
 
+// Re-exports of commonly used `rust_htslib`
+pub use rust_htslib::bam::record::{Aux, AuxArray, AuxIter, Cigar, CigarString, CigarStringView};
+
 /// Type alias for the internal reader type used by htslib
 pub type HtslibReader = Box<dyn io::Read + Send>;
 
